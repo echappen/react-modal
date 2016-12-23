@@ -10,3 +10,5 @@ npm start
 Then open [http://localhost:3000/](http://localhost:3000/)
 
 Click the button to see the modal in action :)
+
+CSS based on the modal from [Bourbon Refills](http://refills.bourbon.io/components/)
