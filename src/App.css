@@ -1,0 +1,147 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 60px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+label img {
+  border-radius: 150px;
+  display: block;
+  max-width: 300px;
+}
+
+.modal-state {
+  display: none;
+}
+
+.modal-trigger {
+  padding: 0.8em 1em;
+}
+
+.modal-fade-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.85);
+  padding-top: 0.6em;
+  text-align: left;
+  transition: opacity 0.25s ease;
+  visibility: hidden;
+  z-index: 99999999999;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-bg {
+  @include position(absolute, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  background: #fff;
+  cursor: pointer;
+}
+
+.modal-close::after,
+.modal-close::before {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 0;
+  left: 50%;
+  width: 0.15em;
+  height: 1.5em;
+  background: #ddd;
+  content: "";
+  display: block;
+  margin: -3px 0 0 -1px;
+  transform: rotate(45deg);
+}
+
+.modal-close:hover::after,
+.modal-close:hover::before {
+  background: darken(#ddd, 10%);
+}
+
+.modal-close::before {
+  transform: rotate(-45deg);
+}
+
+.modal-inner {
+  background: #fff;
+  border-radius: 3px;
+  margin: auto;
+  margin-top: 0;
+  max-height: 95%;
+  overflow: auto;
+  padding: 2em;
+  position: relative;
+  transition: opacity 0.25s ease;
+  width: 65%;
+  max-width: 700px;
+  top: 25%;
+}
+
+.modal h1 {
+  color: #333;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.modal p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.modal-intro {
+  margin-bottom: 1em;
+}
+
+.modal-content {
+  color: #333;
+}
+
+.modal a.cta {
+  color: #fff;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-top: 1em;
+
+  &:last-child {
+    padding: 0 2em;
+  }
+}
