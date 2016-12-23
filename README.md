@@ -1,9 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-To run:
+Installation:
+
+Clone this repo, then
 
 ```
 cd react-modal
+npm install
+```
+
+To run:
+
+```
 npm start
 ```
 
