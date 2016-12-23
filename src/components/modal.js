@@ -7,7 +7,10 @@ export default class Modal extends Component {
   static propTypes = {
     trigger: PropTypes.object.isRequired,
     onOpen: PropTypes.func,
-    onClose: PropTypes.func
+    onClose: PropTypes.func,
+    // I'm not using customClass in my example, but I've added it
+    // in case any modal styling needs to be overridden.
+    customClass: PropTypes.string
   }
   // Use the constructor function to declare initial state
   constructor() {
@@ -42,7 +45,7 @@ export default class Modal extends Component {
 
   render() {
     return (
-      <div className="modal">
+      <div className={`modal ${this.props.customClass || ''}`}>
         <span onClick={this.open.bind(this)}>
           { this.props.trigger }
         </span>
